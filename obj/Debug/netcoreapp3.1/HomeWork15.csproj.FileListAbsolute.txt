@@ -1,0 +1,10 @@
+/Users/user/Documents/AlifLesson15/HomeWork15/bin/Debug/netcoreapp3.1/HomeWork15.deps.json
+/Users/user/Documents/AlifLesson15/HomeWork15/bin/Debug/netcoreapp3.1/HomeWork15.runtimeconfig.json
+/Users/user/Documents/AlifLesson15/HomeWork15/bin/Debug/netcoreapp3.1/HomeWork15.runtimeconfig.dev.json
+/Users/user/Documents/AlifLesson15/HomeWork15/bin/Debug/netcoreapp3.1/HomeWork15.dll
+/Users/user/Documents/AlifLesson15/HomeWork15/bin/Debug/netcoreapp3.1/HomeWork15.pdb
+/Users/user/Documents/AlifLesson15/HomeWork15/obj/Debug/netcoreapp3.1/HomeWork15.csprojAssemblyReference.cache
+/Users/user/Documents/AlifLesson15/HomeWork15/obj/Debug/netcoreapp3.1/HomeWork15.AssemblyInfoInputs.cache
+/Users/user/Documents/AlifLesson15/HomeWork15/obj/Debug/netcoreapp3.1/HomeWork15.AssemblyInfo.cs
+/Users/user/Documents/AlifLesson15/HomeWork15/obj/Debug/netcoreapp3.1/HomeWork15.dll
+/Users/user/Documents/AlifLesson15/HomeWork15/obj/Debug/netcoreapp3.1/HomeWork15.pdb
