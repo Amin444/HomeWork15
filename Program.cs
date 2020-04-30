@@ -7,7 +7,6 @@ namespace HomeWork15
     class Program
     {
         public static List<Client> ClientList = new List<Client>();
-        public static List<Client> CheckClientList = new List<Client>();
         static void Main(string[] args)
         {
             
