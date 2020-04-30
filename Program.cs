@@ -7,12 +7,13 @@ namespace HomeWork15
     class Program
     {
         public static List<Client> ClientList = new List<Client>();
-        
+        public static List<Client> CheckClientList = new List<Client>();
         static void Main(string[] args)
         {
             
 
-           
+            TimerCallback timer = new TimerCallback(CheckBalance);
+            Timer tm = new Timer(timer, ClientList, 0, 10000);
 
             bool circle = true;
             while (circle)
@@ -75,7 +76,8 @@ namespace HomeWork15
             int ID = int.Parse(Console.ReadLine());
             Console.Write("write your Balance: "); 
             decimal Balance = Decimal.Parse(Console.ReadLine());
-            Client ClientInsert = new Client( ID, Balance);
+            decimal LastBalance = Balance;
+            Client ClientInsert = new Client( ID, Balance, LastBalance);
             ClientList.Add(ClientInsert);
             Console.ForegroundColor = ConsoleColor.White;
         }
@@ -126,6 +128,28 @@ namespace HomeWork15
 
         
 
+            public static void CheckBalance(object p)
+        {
+            int i = 0;
+            foreach (var x in ClientList)
+            {
+                if (x.Balance > x.LastBalance)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($" Client ID {x.ID}  balance after changed is {x.Balance} > {x.LastBalance} <- this is last balance  [+]");
+                    ClientList[i].LastBalance = ClientList[i].Balance;
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else if (x.Balance < x.LastBalance)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($" Client ID {x.ID} balance after changed is {x.Balance} < {x.LastBalance} <- this is last balance [-]");
+                    ClientList[i].LastBalance = ClientList[i].Balance;
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                i++;
+            }
+        }
         
     }
 
@@ -134,14 +158,16 @@ namespace HomeWork15
         
         public int ID { get; set; }
         public decimal Balance { get; set; }
+        public decimal LastBalance{get;set;}
          public Client()
          {
 
          }
-        public Client(int ID, decimal Balance)
+        public Client(int ID, decimal Balance, decimal LastBalance)
         {
             this.ID = ID;
             this.Balance = Balance;
+            this.LastBalance = LastBalance;
         }
        
     }
